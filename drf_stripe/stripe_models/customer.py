@@ -23,16 +23,16 @@ class StripeCustomer(BaseModel):
     default_source: Optional[Union[str, Dict]] = None
     delinquent: Optional[bool]
     discount: Optional[Dict] = None
-    invoice_prefix: Optional[str]
-    invoice_settings: Optional[Dict]
-    livemode: Optional[bool]
-    next_invoice_sequence: Optional[int]
-    preferred_locales: Optional[List[str]]
-    sources: Optional[List[Dict]]
-    subscriptions: Optional[List[StripeSubscriptionItems]]
-    tax: Optional[Dict]
-    tax_exempt: Optional[str]
-    tax_ids: Optional[List[Dict]]
+    invoice_prefix: Optional[str] = None
+    invoice_settings: Optional[Dict] = None
+    livemode: Optional[bool] = None
+    next_invoice_sequence: Optional[int] = None
+    preferred_locales: Optional[List[str]] = None
+    sources: Optional[List[Dict]] = None
+    subscriptions: Optional[List[StripeSubscriptionItems]] = None
+    tax: Optional[Dict] = None
+    tax_exempt: Optional[str] = None
+    tax_ids: Optional[List[Dict]] = None
 
 
 class StripeCustomers(BaseModel):
