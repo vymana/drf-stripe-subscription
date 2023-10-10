@@ -129,7 +129,7 @@ def _update_subscription_items(subscription_id, items_data):
 #         )
 
 
-def list_user_subscriptions(user_id, current=True) -> QuerySet[Subscription]:
+def list_user_subscriptions(user_id, current=True) -> QuerySet:
     """
     Retrieve a set of Subscriptions associated with a given user id.
 
@@ -144,7 +144,7 @@ def list_user_subscriptions(user_id, current=True) -> QuerySet[Subscription]:
     return Subscription.objects.filter(q)
 
 
-def list_user_subscription_items(user_id, current=True) -> QuerySet[SubscriptionItem]:
+def list_user_subscription_items(user_id, current=True) -> QuerySet:
     """
     Retrieve a set of SubscriptionItems associated with user id
 
